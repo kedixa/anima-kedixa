@@ -40,6 +40,13 @@ if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
 
 					<div class="entry-content" <?php cryout_schema_microdata('entry-content'); ?>>
 						<?php the_content(); ?>
+						<?php if(!wp_is_mobile()) {?>
+						<div style="text-align:center;">
+							扫一扫在其它设备上查看<br/>
+							<div id="thispage-qrcode"></div>
+							</div>
+						<?php } ?>
+
 						<!-- 本文地址 -->
 						<div id="copyright">
 							<strong>
@@ -71,7 +78,7 @@ if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
 						<div class="nav-next"><em><?php _e('Next Post', 'anima');?></em><?php next_post_link( '%link', '<span>%title</span>' ); ?></div>
 					</nav><!-- #nav-below -->
 				<?php } ?>
-				
+
 				<?php comments_template( '', true ); ?>
 
 		<?php endwhile; // end of the loop. ?>

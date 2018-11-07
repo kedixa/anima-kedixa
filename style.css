@@ -2,25 +2,28 @@
  Theme Name:  anima kedixa
  Theme URI:   https://blog.kedixa.top
  Description: Child theme for anima by kedixa
- Author:      kedixa
+ Author:	  kedixa
  Author URI:  https://kedixa.top
- Template:    anima
- Version:     0.3
+ Template:	  anima
+ Version:	  0.4
  */
 @import url("../anima/style.css");
 
 #copyright {
-    border-radius:10px;
-    line-height:150%;
-    background-color: #d9edf7;
-    padding: 30px 20px 10px 20px;
-    margin-top: 40px;
+	border-radius:10px;
+	line-height:150%;
+	background-color: #d9edf7;
+	padding: 30px 20px 10px 20px;
+	margin-top: 40px;
 }
 #my-footer {
-    background-color: #DDDDDD;
-    line-height: 150%;
-    min-width: 300px;
-    text-align: center;
+	background-color: #DDDDDD;
+	line-height: 150%;
+	min-width: 300px;
+	text-align: center;
+}
+#thispage-qrcode {
+	display: inline-block;
 }
 /* paragraph indent */
 .entry-content {
