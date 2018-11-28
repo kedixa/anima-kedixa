@@ -41,6 +41,18 @@
 	text-align: center;
 	z-index: 0;
 }
+#to-top {
+	width: 40px;
+	border-radius: 20px 20px 0px 0px;
+	display: block;
+	background-color: rgba(230,230,230,0.5);
+}
+#show-qrcode {
+	width: 40px;
+	border-radius: 0px 0px 20px 20px;
+	display: block;
+	background-color: rgba(230,230,230,0.5);
+}
 @media screen and (max-width: 1336px) {
 	#bottom-right-corner{right: 0px;}
 }
