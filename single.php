@@ -40,18 +40,12 @@ if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
 
 					<div class="entry-content" <?php cryout_schema_microdata('entry-content'); ?>>
 						<?php the_content(); ?>
-						<?php if(!wp_is_mobile()) {?>
-						<div style="text-align:center;">
-							扫一扫在其它设备上查看<br/>
-							<div id="thispage-qrcode"></div>
-							</div>
-						<?php } ?>
 
 						<!-- 本文地址 -->
 						<div id="copyright">
 							<strong>
-								<p style="text-indent: 0em;">本文由kedixa发表于<a target="_blank" title="kedixa" href="http://blog.kedixa.top/">个人博客</a>，
-								<a target="_blank" title="版权声明" href="http://blog.kedixa.top/copyrights/">转载请注明作者及出处。</a><br/>
+								<p style="text-indent: 0em;">本文由kedixa发表于<a target="_blank" title="kedixa" href="https://blog.kedixa.top/">个人博客</a>，
+								<a target="_blank" title="版权声明" href="https://blog.kedixa.top/copyrights/">转载请注明作者及出处。</a><br/>
 								本文链接：<a href="<?php echo get_permalink(0)?>" title="<?php echo the_title('', '', false)?>"><?php echo get_permalink(0)?></a><br/> </p>
 							</strong>
 						</div>

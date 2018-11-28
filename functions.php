@@ -9,22 +9,25 @@ add_filter('wp_footer', 'kedixa_add_to_footer');
 function kedixa_add_to_footer() {
 ?>
 <?php
-	if(is_single()) {
-		if(! wp_is_mobile()) {?>
+		if(! wp_is_mobile()) {
+			global $wp; $thispage_url = home_url(add_query_arg(array(),$wp->request));
+		?>
+		
 	<!-- QR Code -->
 	<!-- Ref: http://www.runoob.com/w3cnote/javascript-qrcodejs-library.html -->
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/qrcode.min.js' ?>"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/kedixa.js' ?>"></script>
 	<script type="text/javascript">
-		var qrcode = new QRCode(document.getElementById("thispage-qrcode"), {
+		var qrcode = new QRCode(document.getElementById("the-qrcode"), {
 			width : 200,
 			height : 200
 		});
 		function makeCode () {
-			qrcode.makeCode("<?php echo get_permalink(0) ?>");
+			qrcode.makeCode("<?php echo $thispage_url ?>");
 		}
 		makeCode();
 	</script>
-	<?php }
+	<?php
 	}?>
 
 	<!-- Baidu analytics -->

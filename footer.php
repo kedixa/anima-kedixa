@@ -40,6 +40,13 @@
 			&copy; 2016-<?php echo date("Y")?> kedixa. All Rights Reserved.<br>
 		</div><!-- my-footer -->
 	</footer>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+	<div id="bottom-right-corner">
+		<a id="to-top" href="javascript:void(0)" title="返回顶部"> <i class="fa fa-angle-double-up fa-2x"></i> </a><br/>
+		<a id="show-qrcode" href="javascript:void(0)" title="扫一扫在其他设备上查看"> <i class="fa fa-qrcode fa-2x"> </i></a>
+		<div id="qrcode-wrapper"><div id="the-qrcode"> </div></div>
+	</div>
 </div><!-- site-wrapper -->
 		<?php wp_footer(); ?>
 </body>
