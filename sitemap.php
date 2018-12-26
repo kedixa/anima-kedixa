@@ -10,7 +10,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="
 <!-- generated-on=<?php echo get_lastpostdate('blog'); ?> Diy By 张戈博客(http://zhangge.net)-->
 	<url>
 		<loc><?php echo get_home_url(); ?></loc>
-		<lastmod><?php $ltime = get_lastpostmodified(GMT);$ltime = gmdate('Y-m-d\TH:i:s+00:00', strtotime($ltime)); echo $ltime; ?></lastmod>
+		<lastmod><?php $ltime = get_lastpostmodified('GMT');$ltime = gmdate('Y-m-d\TH:i:s+00:00', strtotime($ltime)); echo $ltime; ?></lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
