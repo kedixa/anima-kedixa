@@ -39,6 +39,7 @@ if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
 					<?php cryout_singular_before_inner_hook();  ?>
 
 					<div class="entry-content" <?php cryout_schema_microdata('entry-content'); ?>>
+					<style type="text/css"> .entry-content > p{text-indent: 2em;}</style>
 						<?php the_content(); ?>
 
 						<!-- 本文地址 -->
