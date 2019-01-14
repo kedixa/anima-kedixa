@@ -41,11 +41,24 @@
 		</div><!-- my-footer -->
 	</footer>
 
-	<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
 	<div id="bottom-right-corner">
-		<a id="to-top" href="javascript:void(0)" title="返回顶部"> <i class="fa fa-angle-double-up fa-2x"></i> </a>
-		<a id="show-qrcode" href="javascript:void(0)" title="扫一扫在其他设备上查看"> <i class="fa fa-qrcode fa-2x"> </i></a>
-		<div id="qrcode-wrapper"><div id="the-qrcode"> </div></div>
+		<a id="to-top" href="javascript:void(0)" title="返回顶部">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30">
+			<polyline points="5,25 15,15 25,25" style="fill:none;stroke:currentColor;stroke-width:3" />
+		</svg>
+		</a>
+		<a id="show-qrcode" href="javascript:void(0)" title="扫一扫在其他设备上查看">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30">
+			<rect x="2" y="2" width="12" height="12" style="fill:none;stroke:currentColor;stroke-width:2"/>
+			<rect x="6" y="6" width="4" height="4" style="fill:currentColor;stroke:currentColor;stroke-width:2"/>
+			<rect x="17" y="2" width="12" height="12" style="fill:none;stroke:currentColor;stroke-width:2"/>
+			<rect x="21" y="6" width="4" height="4" style="fill:currentColor;stroke:currentColor;stroke-width:2"/>
+			<rect x="2" y="17" width="12" height="12" style="fill:none;stroke:currentColor;stroke-width:2"/>
+			<rect x="6" y="21" width="4" height="4" style="fill:currentColor;stroke:currentColor;stroke-width:2"/>
+			<rect x="20" y="20" width="6" height="6" style="fill:currentColor;stroke:currentColor;stroke-width:2"/>
+		</svg>
+		</a>
+		<div id="qrcode-wrapper"><div style="margin-top:20px;">扫一扫在其他设备上查看</div><div id="the-qrcode"> </div></div>
 	</div>
 </div><!-- site-wrapper -->
 		<?php wp_footer(); ?>
