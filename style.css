@@ -1,12 +1,12 @@
 /*
- Theme Name:  anima kedixa
- Theme URI:   https://blog.kedixa.top
- Description: Child theme for anima by kedixa
- Author:      kedixa
- Author URI:  https://kedixa.top
- Template:    anima
- Version:     0.5
- */
+Theme Name:  anima kedixa
+Theme URI:   https://blog.kedixa.top
+Description: Child theme for anima by kedixa
+Author:      kedixa
+Author URI:  https://kedixa.top
+Template:    anima
+Version:     0.6
+*/
 @import url("../anima/style.css");
 
 #copyright {
@@ -25,7 +25,7 @@
 #qrcode-wrapper {
 	display: none;
 	position: fixed;
-	bottom: 80px;
+	bottom: 90px;
 	right: 60px;
 	border-radius: 10px;
 	background-color: #d9edf7;
@@ -35,7 +35,7 @@
 }
 #bottom-right-corner {
 	right: 20px;
-	bottom: 80px;
+	bottom: 90px;
 	position: fixed;
 	width: 40px;
 	text-align: center;
@@ -79,5 +79,5 @@
 .entry-content h6,
 .entry-summary p,
 .entry-title {
-    font-family: "Consolas", "Microsoft YaHei", "SimSun";
+	font-family: "Consolas", "Microsoft YaHei", "SimSun";
 }

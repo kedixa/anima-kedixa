@@ -20,13 +20,14 @@ function kedixa_add_to_footer() {
 		global $wp; $thispage_url = home_url(add_query_arg(array(),$wp->request));
 	?>
 	<!-- QR Code -->
-	<!-- Ref: http://www.runoob.com/w3cnote/javascript-qrcodejs-library.html -->
+	<!-- Thanks: https://github.com/davidshimjs/qrcodejs -->
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/qrcode.min.js' ?>"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/kedixa.js' ?>"></script>
 	<script type="text/javascript">
 		var qrcode = new QRCode(document.getElementById("the-qrcode"), {
-			width : 200,
-			height : 200
+			width : 150,
+			height : 150,
+			colorLight: '#d9edf7'
 		});
 		function makeCode () {
 			qrcode.makeCode("<?php echo $thispage_url ?>");

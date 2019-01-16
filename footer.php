@@ -47,7 +47,7 @@
 			<polyline points="5,25 15,15 25,25" style="fill:none;stroke:currentColor;stroke-width:3" />
 		</svg>
 		</a>
-		<a id="show-qrcode" href="javascript:void(0)" title="扫一扫在其他设备上查看">
+		<a id="show-qrcode" href="javascript:void(0)" title="扫一扫">
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30">
 			<rect x="2" y="2" width="12" height="12" style="fill:none;stroke:currentColor;stroke-width:2"/>
 			<rect x="6" y="6" width="4" height="4" style="fill:currentColor;stroke:currentColor;stroke-width:2"/>
