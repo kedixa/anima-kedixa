@@ -5,6 +5,13 @@ function login_protection() {
 	if($_GET['kedixa'] != 'goodman') header('Location: ' . site_url());
 }
 
+function remove_google_fonts() {
+	// remove anima-googlefonts enqueued by anima
+	wp_dequeue_style('anima-googlefonts');
+}
+// add action to wp_head with priority 2, before wp print styles
+add_action('wp_head', 'remove_google_fonts', 2);
+
 add_filter('wp_footer', 'kedixa_add_to_footer');
 function kedixa_add_to_footer() {
 ?>
