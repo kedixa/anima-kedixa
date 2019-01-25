@@ -8,14 +8,15 @@
  */
 
 ?>
-				<?php cryout_absolute_bottom_hook(); ?>
-				<aside id="colophon" role="complementary" style="background-color:rgba(255,255,255,255);" <?php cryout_schema_microdata( 'sidebar' );?>>
-						<div id="colophon-inside" <?php anima_footer_colophon_class();?>>
-								<?php get_sidebar( 'footer' );?>
-						</div>
-				</aside><!-- #colophon -->
+		<?php cryout_absolute_bottom_hook(); ?>
 
-		</div><!-- #main -->
+		<aside id="colophon" role="complementary" style="background-color:rgba(255,255,255,255);" <?php cryout_schema_microdata( 'sidebar' );?>>
+			<div id="colophon-inside" <?php anima_footer_colophon_class();?>>
+				<?php get_sidebar( 'footer' );?>
+			</div>
+		</aside><!-- #colophon -->
+
+	</div><!-- #main -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
 		<div id="my-footer" class="site-info">
 			<?php $base_url = home_url();
@@ -61,6 +62,6 @@
 		<div id="qrcode-wrapper"><div style="margin-top:20px;">扫一扫在其他设备上查看</div><div id="the-qrcode"> </div></div>
 	</div>
 </div><!-- site-wrapper -->
-		<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 </body>
 </html>

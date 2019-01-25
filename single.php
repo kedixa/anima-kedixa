@@ -6,7 +6,7 @@
  */
 
 get_header();
-if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
+if ( 2 == cryout_get_option( 'anima_singlenav' ) ) { ?>
 	<nav id="nav-fixed">
 		<div class="nav-previous"><?php previous_post_link( '%link', '<i class="icon-continue-reading"></i><span>%title</span>' ); ?></div>
 		<div class="nav-next"><?php next_post_link( '%link', '<span>%title</span><i class="icon-continue-reading"></i>' ); ?></div>
@@ -28,7 +28,9 @@ if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
 						<div class="entry-meta beforetitle-meta">
 							<?php cryout_post_title_hook(); ?>
 						</div><!-- .entry-meta -->
-						<?php the_title( '<h1 class="entry-title singular-title" ' . cryout_schema_microdata('entry-title', 0) . '>', '</h1>' ); ?>
+						<?php if ( FALSE == cryout_get_option( 'anima_headertitles_posts' ) ) {
+							the_title( '<h1 class="entry-title singular-title" ' . cryout_schema_microdata('entry-title', 0) . '>', '</h1>' );
+						} ?>
 
 						<div class="entry-meta aftertitle-meta">
 							<?php cryout_post_meta_hook(); ?>
@@ -54,27 +56,28 @@ if ( 2 == cryout_get_option ('anima_singlenav') ) { ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'anima' ), 'after' => '</span></div>' ) ); ?>
 					</div><!-- .entry-content -->
 
-					<div class="entry-meta entry-utility">
+					<footer class="entry-meta entry-utility">
 						<?php cryout_post_utility_hook(); ?>
-					</div><!-- .entry-utility -->
+					</footer><!-- .entry-utility -->
 
-					<?php cryout_singular_after_inner_hook();  ?>
 				</div><!-- .article-inner -->
+				<?php cryout_singular_after_inner_hook();  ?>
 			</article><!-- #post-## -->
 
-				<?php if ( get_the_author_meta( 'description' ) ) {
-						// If a user has filled out their description, show a bio on their entries
-						get_template_part( 'content/author-bio' );
-				} ?>
+					<?php if ( get_the_author_meta( 'description' ) ) {
+							// If a user has filled out their description, show a bio on their entries
+							get_template_part( 'content/author-bio' );
+					} ?>
+					<?php if ( 1 == cryout_get_option ('anima_singlenav') ) { ?>
+						<nav id="nav-below" class="navigation" role="navigation">
+							<div class="nav-previous"><em><?php _e('Previous Post', 'anima');?></em><?php previous_post_link( '%link', '<span>%title</span>' ); ?></div>
+							<div class="nav-next"><em><?php _e('Next Post', 'anima');?></em><?php next_post_link( '%link', '<span>%title</span>' ); ?></div>
+						</nav><!-- #nav-below -->
+					<?php } ?>
 
-				<?php if ( 1 == cryout_get_option ('anima_singlenav') ) { ?>
-					<nav id="nav-below" class="navigation" role="navigation">
-						<div class="nav-previous"><em><?php _e('Previous Post', 'anima');?></em><?php previous_post_link( '%link', '<span>%title</span>' ); ?></div>
-						<div class="nav-next"><em><?php _e('Next Post', 'anima');?></em><?php next_post_link( '%link', '<span>%title</span>' ); ?></div>
-					</nav><!-- #nav-below -->
-				<?php } ?>
+					<?php cryout_singular_before_comments_hook();  ?>
 
-				<?php comments_template( '', true ); ?>
+					<?php comments_template( '', true ); ?>
 
 		<?php endwhile; // end of the loop. ?>
 

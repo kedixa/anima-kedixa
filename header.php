@@ -58,5 +58,8 @@
 
 	</header><!-- #masthead -->
 	<?php if ( ! anima_header_title_check() ) cryout_breadcrumbs_hook(); ?>
+
+	<?php cryout_absolute_top_hook(); ?>
+
 	<div id="content" class="cryout">
 		<?php cryout_main_hook(); ?>
