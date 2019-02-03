@@ -16,6 +16,25 @@
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="bookmark" href="/favicon.ico" />
 <?php
+	$description = '';
+	if(is_home()) {
+		$description = 'kedixa的博客 主页';
+	}
+	elseif(is_single()) {
+		$description = the_title('', '', false);
+	}
+	elseif(is_category()) {
+		$description = 'kedixa的博客 分类目录';
+	}
+	elseif(is_tag()) {
+		$description = 'kedixa的博客 标签';
+	}
+	else {
+		$description = 'kedixa的博客';
+	}
+?>
+<meta name="description" content="<?php echo $description; ?>" />
+<?php
 	cryout_header_hook();
 	wp_head();
 ?>
