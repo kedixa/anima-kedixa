@@ -30,7 +30,7 @@
 			<?php print_foot_link($base_url, "/feed/", "文章RSS", " -\n"); ?>
 			<?php print_foot_link($base_url, "/copyrights/", "版权声明", "\n"); ?>
 			<br>
-			<a target="_blank" href="http://www.miitbeian.gov.cn/">冀ICP备16024227号</a> -
+			<a target="_blank" href="http://www.beian.miit.gov.cn/">冀ICP备16024227号</a> -
 			<a target="_blank" href="https://www.aliyun.com/">阿里云</a>
 			<br>
 			Powered by

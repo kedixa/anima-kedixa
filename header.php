@@ -21,7 +21,8 @@
 		$description = 'kedixa的博客 主页';
 	}
 	elseif(is_single()) {
-		$description = the_title('', '', false);
+		$description = the_title('', '', false) . ': ' . str_replace("\n", '', mb_strimwidth(
+			strip_tags($post->post_content), 0, 100, '', 'utf-8'));
 	}
 	elseif(is_category()) {
 		$description = 'kedixa的博客 分类目录';
