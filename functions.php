@@ -13,6 +13,11 @@ function remove_google_fonts() {
 add_action('wp_head', 'remove_google_fonts', 2);
 
 add_filter('wp_footer', 'kedixa_add_to_footer');
+/*@ Resolve &amp; issue of syntax highlighter */
+// https://github.com/Automattic/syntaxhighlighter/issues/98#issuecomment-633230821
+add_filter('syntaxhighlighter_htmlresult', function($html) {
+        return preg_replace('/&amp;([^;]+;)/', '&$1', $html);
+});
 function kedixa_add_to_footer() {
 ?>
 	<?php
